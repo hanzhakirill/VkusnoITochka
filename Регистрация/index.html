@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            color: rgb(0, 0, 0);
+            background-image: url('bg.jpeg'); 
+            background-repeat: repeat;              
+            background-color: rgb(255, 255, 255);  
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        .form-container {
+            min-inline-size: 250px;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo-container img {
+            max-inline-size: 120px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 12px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        input {
+            padding: 5px;
+            background-color: #e4e4e4;
+            color: #000000;
+            border: 1px solid #a7a7a7;
+            inline-size: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 5px 15px;
+            background-color: #295a3e;
+            color: white;
+            border: none;
+            cursor: pointer;
+            inline-size: 100%;
+            margin-top: 5px;
+        }
+
+        #result {
+            margin-top: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .error { color: #ff4d4d; }
+        .success { color: #4caf50; }
+
+        .pomosh {
+            inline-size: 100%;
+            max-inline-size: 400px;
+            text-align: center;
+            margin-bottom: 15px;
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .border {
+            border: 0;
+            height: 1px;
+            background-color: #ccc;
+            margin-bottom: 15px;
+        }
+
+        .link {
+            color: #0066cc;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="form-container">
+            <div class="logo-container">
+                <img src="logo.png" alt="Логотип">
+            </div>
+            
+            <h2>Регистрация</h2>
+            
+            <div class="form-group">
+                <label for="login">Логин:</label>
+                <input type="text" id="login" placeholder="Минимум 4 символа">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Почта:</label>
+                <input type="text" id="email" placeholder="example@mail.com">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" placeholder="Минимум 8 символов">
+            </div>
+
+            <button onclick="checkForm()">Отправить</button>
+
+            <div id="result"></div>
+        </div>
+    </div>
+    
+    <div class="pomosh">
+        <hr class="border">
+        <div>Нужна помощь? <a href="https://vkusnoitochka.ru/feedback" class="link">Свяжитесь с нами</a></div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
